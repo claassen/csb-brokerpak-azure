@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+set -e
 set -o nounset
 
 wait_for_service() {
@@ -178,4 +179,9 @@ bind_service_test() {
     fi
 
     return ${LOCAL_RESULT}
+}
+
+print_log_message() {
+  MSG=$1
+  echo "********** $MSG **********"
 }

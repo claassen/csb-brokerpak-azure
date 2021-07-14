@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+set -e
 set -o pipefail
 set -o nounset
 
@@ -21,7 +22,14 @@ done
 
 UPDATE_SERVICES=("csb-azure-mysql" "csb-azure-mssql" "csb-azure-mssql-failover-group" "csb-azure-postgresql")
 for s in "${UPDATE_SERVICES[@]}"; do
-    create_service "${s}" small "${s}-$$" &
+    if [ "${s}" == "csb-azure-mssql-failover-group" ]; then
+        plan="small-v2"
+    elif [ "${s}" == "csb-azure-mssql" ]; then
+        plan="small-v2"
+    else
+        plan="small"
+    fi
+    create_service "${s}" "$plan" "${s}-$$" &
     INSTANCES+=("${s}-$$")
     UPDATE_INSTANCES+=("${s}-$$")
 done
