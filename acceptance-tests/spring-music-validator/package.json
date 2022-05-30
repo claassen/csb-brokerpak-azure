@@ -14,7 +14,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "mongodb": "^4.6.0",
-    "mssql": "^8.1.1",
+    "mssql": "^8.1.2",
     "mysql": "^2.18.1",
     "pg": "^8.7.3",
     "redis": "^4.1.0",
