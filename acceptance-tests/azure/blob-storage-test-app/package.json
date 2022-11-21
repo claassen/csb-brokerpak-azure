@@ -15,7 +15,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@azure/storage-blob": "^12.12.0",
-    "restify": "^8.6.1",
+    "restify": "^9.0.0",
     "vcap_services": "^0.7.1"
   }
 }
