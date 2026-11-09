@@ -13,7 +13,7 @@
   "author": "Ernie Billing",
   "license": "Apache-2.0",
   "dependencies": {
-    "mongodb": "^7.7.0",
+    "mongodb": "^7.8.0",
     "mssql": "^12.7.14",
     "mysql": "^2.18.1",
     "pg": "^8.23.1",
